@@ -14,8 +14,7 @@ class DemoUtilsTest {
      * initiate the object before each test case
      */
     @BeforeEach
-    void setUpBeforeEach()
-    {
+    void setUpBeforeEach() {
         demoUtils = new DemoUtils();
     }
 
@@ -39,6 +38,14 @@ class DemoUtilsTest {
         String string1 = null;
         String string2 = "java";
         assertNull(demoUtils.checkNull(string1), "This object should be null.");
-        assertNotNull(demoUtils.checkNull(string2),"This should not be null.");
+        assertNotNull(demoUtils.checkNull(string2), "This should not be null.");
+    }
+
+    @Test
+    @DisplayName("Check objects are same or not")
+    void assertSameOrNotSame() {
+        String string = "Programming Learning";
+        assertSame(demoUtils.getAcademy(), demoUtils.getAcademyDuplicate(), "Objects should refer to the same object");
+        assertNotSame(string, demoUtils.getAcademy(), "Objects should not refer to the same object");
     }
 }
