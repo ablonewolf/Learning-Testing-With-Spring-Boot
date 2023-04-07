@@ -55,4 +55,11 @@ class DemoUtilsTest {
         assertTrue(demoUtils.isGreater(10, 8));
         assertFalse(demoUtils.isGreater(10, 12));
     }
+
+    @Test
+    @DisplayName("check if array is equal")
+    void testArrayEquals() {
+        String[] stringArray = {"A", "B", "C"};
+        assertArrayEquals(stringArray, demoUtils.getFirstThreeLettersOfAlphabet(), "Arrays should be same");
+    }
 }
