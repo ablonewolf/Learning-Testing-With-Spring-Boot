@@ -1,13 +1,13 @@
-package com.luv2code.junitdemo;
+package com.arka99.JUnitDemo;
 
 import java.util.List;
 
 public class DemoUtils {
 
-    private String academy = "Luv2Code Academy";
+    private String academy = "Programming Learning Academy";
     private String academyDuplicate = academy;
     private String[] firstThreeLettersOfAlphabet = {"A", "B", "C"};
-    private List<String> academyInList = List.of("luv", "2", "code");
+    private List<String> academyInList = List.of("Programming", "Learning", "Academy");
 
     public List<String> getAcademyInList() {
         return academyInList;
