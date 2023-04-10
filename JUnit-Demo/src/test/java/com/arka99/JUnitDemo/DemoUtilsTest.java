@@ -78,4 +78,10 @@ class DemoUtilsTest {
         List<String> stringLine = List.of("Programming", "Learning", "Academy");
         assertLinesMatch(stringLine, demoUtils.getAcademyInList(), "Both Lists of Strings should be equal.");
     }
+    @Test
+    @DisplayName("Check if an exception is thrown or not")
+    void testThrowsAndDoesNotThrow() {
+        assertThrows(Exception.class, ()->demoUtils.throwException(-2), "Method should throw an exception.");
+        assertDoesNotThrow(()->demoUtils.throwException(5),"Method should not throw exception.");
+    }
 }
