@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class DemoUtilsTest {
@@ -61,5 +63,12 @@ class DemoUtilsTest {
     void testArrayEquals() {
         String[] stringArray = {"A", "B", "C"};
         assertArrayEquals(stringArray, demoUtils.getFirstThreeLettersOfAlphabet(), "Arrays should be same");
+    }
+
+    @Test
+    @DisplayName("Check if two iterables are equal")
+    void testIterableEquals() {
+        List<String> stringList = List.of("Programming", "Learning", "Academy");
+        assertIterableEquals(stringList, demoUtils.getAcademyInList(), "Both iterables should be equal.");
     }
 }
