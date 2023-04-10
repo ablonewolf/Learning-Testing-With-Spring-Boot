@@ -71,4 +71,11 @@ class DemoUtilsTest {
         List<String> stringList = List.of("Programming", "Learning", "Academy");
         assertIterableEquals(stringList, demoUtils.getAcademyInList(), "Both iterables should be equal.");
     }
+
+    @Test
+    @DisplayName("Check if two List of Strings are equal.")
+    void testLinesMatch() {
+        List<String> stringLine = List.of("Programming", "Learning", "Academy");
+        assertLinesMatch(stringLine, demoUtils.getAcademyInList(), "Both Lists of Strings should be equal.");
+    }
 }
